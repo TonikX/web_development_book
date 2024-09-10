@@ -1,0 +1,10 @@
+site_name: My Docs
+nav:
+  - Главная: index.md
+  - Лабораторная №1:
+    - Теория: labs/1_working_with_sockets/main_text.md
+    - Примеры на Python: labs/1_working_with_sockets/examples.md
+    - Задание: labs/1_working_with_sockets/tasks.md
+theme:
+  name: null
+  custom_dir: 'cinder'
