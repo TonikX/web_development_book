@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Задание - My Docs</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">My Docs</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Главная</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Лабораторная №1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../main_text/">Теория</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../examples/">Примеры на Python</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Задание</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../examples/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">Практическое задание:</a></li>
+        <li class="first-level "><a href="#1">Задание 1:</a></li>
+        <li class="first-level "><a href="#2">Задание 2:</a></li>
+        <li class="first-level "><a href="#3">Задание 3:</a></li>
+        <li class="first-level "><a href="#4">Задание 4:</a></li>
+        <li class="first-level "><a href="#5">Задание 5:</a></li>
+        <li class="first-level "><a href="#_2">Выполнение работы:</a></li>
+        <li class="first-level "><a href="#_3">Оценивание:</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h3 id="_1">Практическое задание:</h3>
+<h2 id="1">Задание 1:</h2>
+<p>Реализовать клиентскую и серверную часть приложения. Клиент отправляет серверу сообщение «Hello, server», и оно должно отобразиться на стороне сервера. В ответ сервер отправляет клиенту сообщение «Hello, client», которое должно отобразиться у клиента.</p>
+<p><strong>Требования:</strong></p>
+<ul>
+<li>Обязательно использовать библиотеку <code>socket</code>.</li>
+<li>Реализовать с помощью протокола UDP.</li>
+</ul>
+<p><strong>Полезные ссылки:</strong></p>
+<ul>
+<li><a href="https://habr.com/ru/post/149077/">Habr: Основы работы с сокетами</a></li>
+<li><a href="https://andreymal.org/socket3/">Андрей Малинин: Сокеты в Python</a></li>
+<li><a href="https://docs.python.org/3.6/howto/sockets.html">Документация Python: Руководство по сокетам</a></li>
+<li><a href="https://docs.python.org/3.6/library/socket.html">Python Library Reference: socket</a></li>
+<li><a href="https://www.youtube.com/watch?v=Lbfe3-v7yE0">Видео: Введение в работу с сокетами</a></li>
+</ul>
+<hr />
+<h2 id="2">Задание 2:</h2>
+<p>Реализовать клиентскую и серверную часть приложения. Клиент запрашивает выполнение математической операции, параметры которой вводятся с клавиатуры. Сервер обрабатывает данные и возвращает результат клиенту.</p>
+<p><strong>Варианты операций:</strong></p>
+<ol>
+<li>Теорема Пифагора.</li>
+<li>Решение квадратного уравнения.</li>
+<li>Поиск площади трапеции.</li>
+<li>Поиск площади параллелограмма.</li>
+</ol>
+<p><strong>Порядок выбора варианта:</strong> Выбирается по порядковому номеру в журнале (пятый студент получает вариант 1 и т.д.).</p>
+<p><strong>Требования:</strong></p>
+<ul>
+<li>Обязательно использовать библиотеку <code>socket</code>.</li>
+<li>Реализовать с помощью протокола TCP.</li>
+</ul>
+<hr />
+<h2 id="3">Задание 3:</h2>
+<p>Реализовать серверную часть приложения. Клиент подключается к серверу, и в ответ получает HTTP-сообщение, содержащее HTML-страницу, которая сервер подгружает из файла <code>index.html</code>.</p>
+<p><strong>Полезные ссылки:</strong></p>
+<ul>
+<li><a href="http://zetcode.com/python/socket/">ZetCode: Работа с сокетами</a></li>
+</ul>
+<p><strong>Требования:</strong></p>
+<ul>
+<li>Обязательно использовать библиотеку <code>socket</code>.</li>
+</ul>
+<hr />
+<h2 id="4">Задание 4:</h2>
+<p>Реализовать двухпользовательский или многопользовательский чат. Для максимального количества баллов реализуйте многопользовательский чат.</p>
+<p><strong>Требования:</strong></p>
+<ul>
+<li>Обязательно использовать библиотеку <code>socket</code>.</li>
+<li>Для многопользовательского чата необходимо использовать библиотеку <code>threading</code>.</li>
+</ul>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Протокол TCP: 100% баллов.</li>
+<li>Протокол UDP: 80% баллов.</li>
+<li>Для UDP используйте <code>threading</code> для получения сообщений на клиенте.</li>
+<li>Для TCP запустите клиентские подключения и обработку сообщений от всех пользователей в потоках. Не забудьте сохранять пользователей, чтобы отправлять им сообщения.</li>
+</ul>
+<p><strong>Полезные ссылки:</strong></p>
+<ul>
+<li><a href="https://docs.python.org/3/library/threading.html">Документация Python: threading</a></li>
+<li><a href="https://webdevblog.ru/vvedenie-v-potoki-v-python/">WebDevBlog: Введение в потоки Python</a></li>
+</ul>
+<hr />
+<h2 id="5">Задание 5:</h2>
+<p>Написать простой веб-сервер для обработки GET и POST HTTP-запросов с помощью библиотеки <code>socket</code> в Python.</p>
+<p><strong>Задание:</strong></p>
+<ul>
+<li>Сервер должен:<ol>
+<li>Принять и записать информацию о дисциплине и оценке по дисциплине.</li>
+<li>Отдать информацию обо всех оценках по дисциплинам в виде HTML-страницы.</li>
+</ol>
+</li>
+</ul>
+<p><strong>Полезные ссылки:</strong></p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1lv_3D9VtMxz8tNkA6rA1xu9zaWEIBGXiLWBo1cse-0k/edit?usp=sharing">Базовый класс для веб-сервера</a></li>
+<li><a href="https://iximiuz.com/ru/posts/writing-python-web-server-part-3/">Мануал по созданию сервера</a></li>
+</ul>
+<hr />
+<h2 id="_2">Выполнение работы:</h2>
+<ul>
+<li>Работа выполняется индивидуально.</li>
+<li>По результатам необходимо подготовить отчет в виде текстового документа.</li>
+</ul>
+<h2 id="_3">Оценивание:</h2>
+<ul>
+<li>Выполнение пунктов 1-4 и однопользовательского чата (без потоков) — 60% баллов.</li>
+<li>Выполнение пунктов 1-5 и многопользовательского чата (с потоками) — 100% баллов.</li>
+</ul></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
