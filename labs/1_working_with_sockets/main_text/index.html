@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Теория - My Docs</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">My Docs</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Главная</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Лабораторная №1 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Теория</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../examples/">Примеры на Python</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../tasks/">Задание</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../..">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../examples/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">Теоретические сведения</a></li>
+            <li class="second-level"><a href="#-">Клиент-серверное взаимодействие</a></li>
+                
+                <li class="third-level"><a href="#_2">Пример:</a></li>
+            <li class="second-level"><a href="#tcpip">Модель TCP/IP</a></li>
+                
+                <li class="third-level"><a href="#_3">Пример передачи данных:</a></li>
+                <li class="third-level"><a href="#_4">Инкапсуляция и декапсуляция данных</a></li>
+                <li class="third-level"><a href="#dns">DNS и разрешение доменных имен</a></li>
+            <li class="second-level"><a href="#http">Протокол HTTP</a></li>
+                
+                <li class="third-level"><a href="#http-">Основные элементы HTTP-запроса:</a></li>
+                <li class="third-level"><a href="#http-_1">HTTP-ответ:</a></li>
+                <li class="third-level"><a href="#http-_2">Пример HTTP-запроса и ответа:</a></li>
+                <li class="third-level"><a href="#http_1">Методы HTTP:</a></li>
+                <li class="third-level"><a href="#http-_3">HTTP-заголовки</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<p><strong>Лабораторная работа №1: Работа с сокетами</strong></p>
+<p><strong>Цель:</strong> Овладеть практическими навыками создания web-серверов и использования сокетов для сетевых взаимодействий.</p>
+<p><strong>Оборудование:</strong> ПК или ноутбук с доступом к сети.</p>
+<p><strong>Программное обеспечение:</strong> Python 3.x (актуальная версия), библиотеки Python: <code>sys</code>, <code>socket</code>.</p>
+<hr />
+<h1 id="_1">Теоретические сведения</h1>
+<h2 id="-">Клиент-серверное взаимодействие</h2>
+<p>Клиент-серверная модель является основой работы веб-приложений. Она распределяет функционал между двумя участниками: клиентом (программа, запрашивающая услугу) и сервером (программа, предоставляющая услугу).</p>
+<ul>
+<li><strong>Клиент</strong> – это программа, например, браузер, которая отправляет запросы на сервер.</li>
+<li><strong>Сервер</strong> – программа, которая обрабатывает запросы и отправляет ответ (например, HTTP-сервер Apache, базы данных MySQL).</li>
+</ul>
+<p>Они взаимодействуют по сети (например, Интернет) с использованием различных протоколов, таких как HTTP, FTP и IP-протоколы. Каждый протокол выполняет свою задачу, позволяя клиенту отправлять запросы, а серверу отвечать на них.</p>
+<h5 id="_2">Пример:</h5>
+<p><img alt="client_server.png" src="../images/client_server.png" /></p>
+<p>При использовании протокола HTTP клиент (браузер) отправляет серверу запрос на получение веб-страницы. Этот запрос называется <strong>HTTP-запросом</strong> и включает метод (например, GET или POST). Сервер, получив запрос, возвращает <strong>HTTP-ответ</strong> с кодом состояния (например, 200 OK, 404 Not Found) и запрашиваемыми данными (например, HTML-страницей).</p>
+<p>Основной принцип заключается в том, что клиент инициирует взаимодействие, а сервер только отвечает на запросы. Клиентское ПО и серверное ПО обычно работают на разных устройствах, но могут находиться и на одном компьютере.</p>
+<hr />
+<h2 id="tcpip"><strong>Модель TCP/IP</strong></h2>
+<p>TCP/IP — это основа современных сетей, которая обеспечивает передачу данных через шлюзы между разными подсетями.</p>
+<p>Пакеты данных проходят через последовательность маршрутизаторов, которые выбирают оптимальный маршрут для доставки. Это возможно благодаря протоколу IP, который добавляет в каждый пакет адреса отправителя и получателя, а также информацию о номере пакета в последовательности.</p>
+<p>Каждый пакет может следовать по своему маршруту, а при получении данные собираются в правильном порядке благодаря информации о последовательности.</p>
+<h5 id="_3">Пример передачи данных:</h5>
+<ol>
+<li><strong>IP-адрес отправителя:</strong> 82.146.49.55</li>
+<li><strong>Порт отправителя:</strong> 2049</li>
+<li><strong>IP-адрес получателя:</strong> 195.34.32.116</li>
+<li><strong>Порт получателя:</strong> 53 (DNS-сервер)</li>
+</ol>
+<p>Пакет отправляется с сокета 82.146.49.55:2049 на сокет 195.34.32.116:53. Сервер по адресу 195.34.32.116 (DNS) обработает запрос и отправит ответ обратно на сокет отправителя.</p>
+<hr />
+<h4 id="_4">Инкапсуляция и декапсуляция данных</h4>
+<p>Процесс передачи данных делится на несколько этапов. При подготовке к отправке на каждом уровне добавляется заголовок, содержащий служебную информацию (адреса, порты и т.д.). Этот процесс называется <strong>инкапсуляцией</strong>. После получения данных заголовки удаляются на каждом уровне — это <strong>декапсуляция</strong>.</p>
+<p>Заголовки содержат информацию о маршрутизации и корректности данных, что помогает сети доставить их по назначению и собрать в правильном порядке.</p>
+<hr />
+<h4 id="dns">DNS и разрешение доменных имен</h4>
+<p>Людям сложно запоминать IP-адреса (например, 195.34.32.116), поэтому используется система доменных имен (DNS). DNS-сервера преобразуют доменные имена (например, www.example.com) в IP-адреса, что облегчает взаимодействие пользователей с интернет-ресурсами.</p>
+<h5 id="_5">Пример:</h5>
+<p>Клиент отправляет запрос на сервер DNS (195.34.32.116:53) с вопросом: <strong>«Какой IP-адрес соответствует домену www.example.com?»</strong></p>
+<p>DNS-сервер отвечает: <strong>«82.146.49.55»</strong>.</p>
+<p>Затем клиент устанавливает соединение с веб-сервером по порту 80 и загружает страницу www.example.com.</p>
+<h2 id="http"><strong>Протокол HTTP</strong></h2>
+<p>Протокол HTTP (HyperText Transfer Protocol) — это основа взаимодействия между веб-браузерами и веб-серверами. Когда пользователь вводит URL-адрес в строке браузера, кликает по ссылке или отправляет форму, браузер отправляет на сервер HTTP-запрос.</p>
+<h4 id="http-">Основные элементы HTTP-запроса:</h4>
+<ol>
+<li><strong>Метод</strong> — определяет действие, которое нужно выполнить (например, GET, POST).<ul>
+<li><strong>GET</strong> — запрашивает ресурс (например, HTML-страницу или изображение).</li>
+<li><strong>POST</strong> — отправляет данные на сервер (например, для отправки формы).</li>
+</ul>
+</li>
+<li><strong>URL</strong> — определяет путь к ресурсу.</li>
+<li><strong>Заголовки</strong> — содержат метаинформацию о запросе (например, тип клиента, кодировки).</li>
+<li><strong>Тело запроса</strong> (для методов POST и других) — содержит данные, которые передаются на сервер (например, содержимое формы).</li>
+</ol>
+<h4 id="http-_1">HTTP-ответ:</h4>
+<p>После обработки HTTP-запроса сервер отправляет ответ, который содержит:
+1. <strong>Код состояния</strong> — указывает на результат выполнения запроса (например, 200 OK, 404 Not Found).
+2. <strong>Заголовки</strong> — метаинформация о содержимом ответа (например, тип данных, длина).
+3. <strong>Тело ответа</strong> — содержит данные, запрашиваемые клиентом (например, HTML-код веб-страницы).</p>
+<h4 id="http-_2">Пример HTTP-запроса и ответа:</h4>
+<ol>
+<li><strong>Запрос:</strong></li>
+</ol>
+<pre><code>GET /index.html HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+</code></pre>
+<ol>
+<li><strong>Ответ:</strong></li>
+</ol>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1234
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Exa ```
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1234
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;Пример страницы&lt;/body&gt;
+&lt;/html&gt;
+```mple&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;Пример страницы&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="http_1">Методы HTTP:</h4>
+<ul>
+<li><strong>GET</strong> — запрашивает ресурс.</li>
+<li><strong>POST</strong> — отправляет данные на сервер.</li>
+<li><strong>PUT</strong> — обновляет существующий ресурс или создает новый.</li>
+<li><strong>DELETE</strong> — удаляет указанный ресурс.</li>
+<li><strong>HEAD</strong> — запрашивает только заголовки, без тела ответа.</li>
+</ul>
+<h3 id="http-_3"><strong>HTTP-заголовки</strong></h3>
+<p>HTTP-заголовки — это метаинформация, передаваемая между клиентом и сервером для управления передачей данных. Заголовки помогают определить параметры соединения, типы данных, методы сжатия и многое другое.</p>
+<h4 id="_6">Основные виды заголовков:</h4>
+<ol>
+<li><strong>General Headers</strong> — общие заголовки, применяемые и к запросам, и к ответам:</li>
+<li><strong>Connection</strong>: указывает, поддерживать ли соединение (<code>keep-alive</code> или <code>close</code>).</li>
+<li>
+<p><strong>Date</strong>: дата и время отправки сообщения.</p>
+</li>
+<li>
+<p><strong>Request Headers</strong> — заголовки, отправляемые клиентом:</p>
+</li>
+<li><strong>Host</strong>: доменное имя сервера (обязательно).</li>
+<li><strong>User-Agent</strong>: информация о клиенте (браузере).</li>
+<li><strong>Accept</strong>: типы данных, которые клиент может принимать (<code>text/html</code>, <code>application/json</code>).</li>
+<li>
+<p><strong>Cookie</strong>: отправляет куки на сервер.</p>
+</li>
+<li>
+<p><strong>Response Headers</strong> — заголовки, отправляемые сервером:</p>
+</li>
+<li><strong>Content-Type</strong>: тип содержимого ответа (например, <code>text/html</code>).</li>
+<li><strong>Content-Length</strong>: длина тела ответа в байтах.</li>
+<li><strong>Set-Cookie</strong>: устанавливает куки для клиента.</li>
+</ol>
+<h4 id="_7">Пример запроса:</h4>
+<pre><code class="language-http">GET /index.html HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+</code></pre>
+<h4 id="_8">Пример ответа:</h4>
+<pre><code class="language-http">HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 348
+Set-Cookie: sessionid=abc123; HttpOnly
+</code></pre>
+<p>Эти заголовки передают ключевую информацию для обработки запроса и ответа между клиентом и сервером.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
